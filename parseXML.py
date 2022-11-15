@@ -1,4 +1,3 @@
-from cgi import test
 from gettext import find
 import xml.etree.cElementTree as et
 import pandas as pd
