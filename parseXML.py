@@ -126,9 +126,8 @@ for filename in filenames:
         kw1 = reg.findall(".//kw/kw[@name='Log']")
         get_request_response(request, kw1, resp, reason, test_report_type, reg[-1].attrib['status'])
 
-
-
-    d = {'Opco Name': opco,'Test Type':test_type ,'Test Name': test_name, 'Status': status, 'Root Cause (ApplicationResponse)': reason, 'Full Response': resp, 'Request': request, 'Total Elapsed Timetemp': elapsed_time}                    
+        
+    d = {'Opco Name': opco,'Test Type':test_type ,'Test Name': test_name, 'Status': status, 'Root Cause (ApplicationResponse)': reason, 'Full Response': resp, 'Request': request, 'Total Elapsed Time': elapsed_time}                    
     df = pd.DataFrame.from_dict(d, orient='index')
     df = df.transpose()
     final_df = pd.concat([final_df, df], axis=0)
